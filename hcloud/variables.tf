@@ -21,14 +21,22 @@ variable "servers" {
         location    = string
         datacenter  = string
         ssh_keys    = string
-        keep_disk   = string
+        keep_disk   = bool
         labels      = map(any)
-        backups     = string
+        backups     = bool
     }))
     default     = {
         name        = "Andromedia"
-        datacenter  = "hel1-dc2"
+        image       = "centos-8"
         server_type = "cx11"
+        datacenter  = "hel1-dc2"
+        location    = "hel1"
+        ssh_keys    = ""
+        keep_disk   = false
+        backups     = false
+        labels      = {
+            "project": "Andromeda"
+        }
     }
 }
 
