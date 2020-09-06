@@ -1,7 +1,7 @@
 # https://registry.terraform.io/providers/hetznercloud/hcloud/latest/docs
 
 resource "hcloud_network" "server_network" {
-  for_each     = "private_networks"
+  for_each     = var.private_networks
   name         = each.value.name
   ip_range     = each.value.ip_range
 }
