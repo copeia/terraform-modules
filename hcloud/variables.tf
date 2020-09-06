@@ -26,16 +26,18 @@ variable "servers" {
         backups     = bool
     }))
     default     = {
-        name        = "Andromedia"
-        image       = "centos-8"
-        server_type = "cx11"
-        datacenter  = "hel1-dc2"
-        location    = "hel1"
-        ssh_keys    = ""
-        keep_disk   = false
-        backups     = false
-        labels      = {
-            "project": "Andromeda"
+        "server_1"  = {
+            name        = "Andromedia"
+            image       = "centos-8"
+            server_type = "cx11"
+            datacenter  = "hel1-dc2"
+            location    = "hel1"
+            ssh_keys    = ""
+            keep_disk   = false
+            backups     = false
+            labels      = {
+                "project": "Andromeda"
+            }
         }
     }
 }
