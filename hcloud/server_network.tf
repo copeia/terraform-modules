@@ -11,7 +11,7 @@ resource "hcloud_network_subnet" "subnet" {
   network_id   = hcloud_network.server_network.id
   type         = "cloud"
   network_zone = "eu-central"
-  ip_range     = var.ip_range
+  ip_range     = var.subnet_ip_range
 }
 
 # Add all servers to the private network

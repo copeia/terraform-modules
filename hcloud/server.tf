@@ -17,7 +17,7 @@ resource "local_file" "file" {
 # Import new SSH key
 resource "hcloud_ssh_key" "rsa_key" {
   name = var.project_name
-  public_key = "${tls_private_key.ssh_key.public_key_openssh}"
+  public_key = tls_private_key.ssh_key.public_key_openssh
 }
 
 # Create a new server 
