@@ -40,4 +40,5 @@ variable "private_networks" {
 variable "subnet_ip_range" {
     description = "Ip address range for these Hcloud Project Servers"
     type        = string
+    default     = ""
 }
