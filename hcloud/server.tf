@@ -28,7 +28,7 @@ resource "hcloud_server" "server" {
   server_type   = each.value.server_type
   location      = each.value.location
   datacenter    = each.value.datacenter
-  ssh_keys      = var.project_name
+  ssh_keys      = hcloud_ssh_key.rsa_key.name
   keep_disk     = each.value.keep_disk
   labels        = each.value.labels
   backups       = each.value.backups
