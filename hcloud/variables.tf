@@ -20,26 +20,11 @@ variable "servers" {
         server_type = string
         location    = string
         datacenter  = string
-        ssh_keys    = string
         keep_disk   = bool
         labels      = map(any)
         backups     = bool
     }))
-    default     = {
-        "server_1"  = {
-            name        = "Andromedia"
-            image       = "centos-8"
-            server_type = "cx11"
-            datacenter  = "hel1-dc2"
-            location    = "hel1"
-            ssh_keys    = ""
-            keep_disk   = false
-            backups     = false
-            labels      = {
-                "project": "Andromeda"
-            }
-        }
-    }
+    default     = {}
 }
 
 # Networking Vars
