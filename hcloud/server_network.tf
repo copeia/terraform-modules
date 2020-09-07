@@ -1,14 +1,13 @@
 # https://registry.terraform.io/providers/hetznercloud/hcloud/latest/docs
 
 resource "hcloud_network" "server_network" {
-  for_each     = var.private_networks
-  name         = each.value.name
+  name         = var.project_network
   ip_range     = each.value.ip_range
 }
 
 # Create a subnet
 resource "hcloud_network_subnet" "subnet" {
-  network_id   = hcloud_network.server_network.id[each.key]
+  network_id   = hcloud_network.server_network.id
   type         = "cloud"
   network_zone = "eu-central"
   ip_range     = var.subnet_ip_range
