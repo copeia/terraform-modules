@@ -30,8 +30,8 @@ variable "servers" {
 # Networking Vars
 variable "project_network" {
     description = "Networks for these Hcloud Project Servers"
-    type        = any
-    default     = {}
+    type        = string
+    default     = ""
 }
 
 variable "subnet_ip_range" {
