@@ -1,6 +1,7 @@
 # https://registry.terraform.io/providers/hetznercloud/hcloud/latest/docs
 
 resource "hcloud_network" "server_network" {
+  name         = var.project_name
   ip_range     = var.project_network
 }
 
