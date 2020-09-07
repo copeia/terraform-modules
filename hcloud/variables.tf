@@ -18,7 +18,6 @@ variable "servers" {
         name        = string
         image       = string
         server_type = string
-        location    = string
         datacenter  = string
         keep_disk   = bool
         labels      = map(any)

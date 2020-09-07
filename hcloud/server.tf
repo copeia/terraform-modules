@@ -26,7 +26,6 @@ resource "hcloud_server" "server" {
   name          = each.value.name
   image         = each.value.image
   server_type   = each.value.server_type
-  location      = each.value.location
   datacenter    = each.value.datacenter
   ssh_keys      = ["${hcloud_ssh_key.rsa_key.name}"]
   keep_disk     = each.value.keep_disk
