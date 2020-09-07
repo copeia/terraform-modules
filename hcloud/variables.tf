@@ -30,7 +30,7 @@ variable "servers" {
 # Networking Vars
 variable "project_network" {
     description = "Networks for these Hcloud Project Servers"
-    type        = map(any)
+    type        = any
     default     = {}
 }
 
