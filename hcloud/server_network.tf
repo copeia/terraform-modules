@@ -8,7 +8,7 @@ resource "hcloud_network" "server_network" {
 
 # Create a subnet
 resource "hcloud_network_subnet" "subnet" {
-  network_id   = hcloud_network.server_network[each.id]
+  network_id   = hcloud_network.server_network[each.value]
   type         = "cloud"
   network_zone = "eu-central"
   ip_range     = var.subnet_ip_range
