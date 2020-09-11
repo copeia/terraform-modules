@@ -16,7 +16,7 @@ resource "local_file" "file" {
 # https://registry.terraform.io/providers/hetznercloud/hcloud/latest/docs
 # Import new SSH key
 resource "hcloud_ssh_key" "rsa_key" {
-  name = var.project_name
+  name = "${var.project_name}.${var.servers[0]}"
   public_key = tls_private_key.ssh_key.public_key_openssh
 }
 
