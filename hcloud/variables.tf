@@ -47,3 +47,10 @@ variable "subnet_ip_range" {
     type        = string
     default     = "10.10.10.0/27"
 }
+
+# Load Balancer 
+variable "enable_lb" {
+    description = "Boolean to enable/disable a server lb"
+    type        = bool
+    default     = false
+}
