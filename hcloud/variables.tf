@@ -28,13 +28,19 @@ variable "servers" {
 
 # Networking Vars
 variable "project_network" {
-    description = "Networks for these Hcloud Project Servers"
-    type        = string
-    default     = ""
+    description = "Network for these Hcloud Project Servers"
+    type        = map(object({
+        name         = string
+        ip_range     = string
+    }))
+    default     = {
+        name         = "Andromeda"
+        ip_range     = "10.10.10.0/16"
+    }
 }
 
 variable "subnet_ip_range" {
-    description = "Ip address range for these Hcloud Project Servers"
+    description = "IP address range within the project network"
     type        = string
     default     = "10.10.10.0/27"
 }
