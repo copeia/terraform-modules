@@ -49,8 +49,8 @@ variable "subnet_ip_range" {
 }
 
 # Load Balancer 
-variable "enable_lb" {
-    description = "Boolean to enable/disable a server lb"
-    type        = bool
-    default     = false
+variable "lb_ip" {
+    description = "Ip for network lb"
+    type        = string
+    default     = "10.10.10.1"
 }
