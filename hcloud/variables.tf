@@ -1,4 +1,10 @@
 # Basic project vars
+variable "name" {
+    description = "The name for this Hetzner module"
+    type        = string
+    default     = "andromeda"
+}
+
 variable "project_name" {
     description = "The name for this Hetzner project"
     type        = string
