@@ -34,8 +34,10 @@ variable "project_network" {
         ip_range     = string
     }))
     default     = {
+      "network_1"   = {
         name         = "Andromeda"
         ip_range     = "10.10.10.0/16"
+      }
     }
 }
 
